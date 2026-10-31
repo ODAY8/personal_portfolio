@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" fill="none">
+  <rect width="600" height="720" fill="#EAE5D9"/>
+  <rect x="24" y="24" width="552" height="672" stroke="#171914" stroke-opacity="0.22" stroke-width="1"/>
+  <line x1="24" y1="84" x2="576" y2="84" stroke="#171914" stroke-opacity="0.15"/>
+  <text x="44" y="58" fill="#171914" font-family="monospace" font-size="11" letter-spacing="2">PORTRAIT PLACEHOLDER // REPLACE AT /public/images/portrait.jpg</text>
+  <circle cx="300" cy="310" r="110" stroke="#171914" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <circle cx="300" cy="285" r="42" stroke="#171914" stroke-opacity="0.45" stroke-width="1.5"/>
+  <path d="M226 392C238 352 266 334 300 334C334 334 362 352 374 392" stroke="#171914" stroke-opacity="0.45" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="300" y="485" text-anchor="middle" fill="#171914" font-family="Georgia, serif" font-style="italic" font-size="28">Mohamed Abdirahman</text>
+  <text x="300" y="518" text-anchor="middle" fill="#62645D" font-family="monospace" font-size="11" letter-spacing="2">SOFTWARE ENGINEER · AI DEVELOPER · INTERN</text>
+  <rect x="195" y="560" width="210" height="36" fill="#171914"/>
+  <text x="300" y="582" text-anchor="middle" fill="#F3F0E8" font-family="monospace" font-size="10" letter-spacing="1.5">PORTRAIT SLOT (4:5 RATIO)</text>
+</svg>
+

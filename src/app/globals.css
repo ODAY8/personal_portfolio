@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+:root {
+  /* Eye-comfortable, low-glare Warm Stone & Soft Linen palette */
+  --ink: #1f2124;
+  --ink-soft: #2c3035;
+  --paper: #e6e0d4;
+  --paper-elevated: #eee9df;
+  --paper-stone: #dbd4c6;
+  --sand: #d2cab9;
+  --muted: #52565c;
+  --line: rgba(31, 33, 36, 0.15);
+  --line-strong: rgba(31, 33, 36, 0.75);
+  --accent: #2b5464;
+  --accent-deep: #21424f;
+  --copper: #8c4a27;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--paper);
+  color: var(--ink);
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--paper-elevated);
+}
+
+.font-serif-editorial {
+  font-family: var(--font-serif), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.font-sans-body {
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Subtle architectural paper grain overlay */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Editorial container width */
+.editorial-wrap {
+  width: min(1280px, calc(100% - 80px));
+  margin-inline: auto;
+}
+
+.header-wrap {
+  width: min(1380px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+@media (max-width: 1024px) {
+  .editorial-wrap,
+  .header-wrap {
+    width: calc(100% - 48px);
+  }
+}
+
+@media (max-width: 640px) {
+  .editorial-wrap,
+  .header-wrap {
+    width: calc(100% - 32px);
+  }
+}
+
+/* Eyebrow with architectural square marker */
+.eyebrow-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.eyebrow-line::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Section number badge — architectural square-cornered index tag */
+.section-index-badge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 34px;
+  height: 26px;
+  padding-inline: 8px;
+  border: 1px solid var(--line-strong);
+  background: var(--paper-elevated);
+  color: var(--ink);
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+/* Marquee animation */
+@keyframes editorial-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track-anim {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding: 14px 0;
+  animation: editorial-marquee 38s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee-track-anim {
+    animation: none !important;
+  }
+}
